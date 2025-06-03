@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SQL Injection Examples</title>
+  <link rel="stylesheet" href="./example.css">
+</head>
+<body>
+  <div class="container">
+    <h1>SQL Injection Examples</h1>
+
+    <h2>Example 1: Login Bypass</h2>
+    <p><strong>Input:</strong> <code>' OR '1'='1</code></p>
+    <p>This input may trick the SQL query into always returning true, allowing login without credentials.</p>
+    <pre>
+SELECT * FROM users
+WHERE username = '' OR '1'='1'
+AND password = '' OR '1'='1';
+    </pre>
+
+    <h2>Example 2: Extracting Data</h2>
+    <p><strong>Input:</strong> <code>' UNION SELECT name, credit_card FROM users --</code></p>
+    <p>This could be used to extract sensitive info if the app displays results directly.</p>
+    <pre>
+SELECT name, email FROM customers
+WHERE id = '' UNION SELECT name, credit_card FROM users --';
+    </pre>
+
+    <a href="./sql-injection.html" class="button">← Back to Intro</a>
+  </div>
+</body>
+</html>
