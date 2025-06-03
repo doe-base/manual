@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL Injection Mapping</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Mapping An Application</h1>
+
+    <section>
+      <h2>Step 1 - Scraping the Application</h2>
+      <p>Gather as much information about the application as possible. This includes:</p>
+      <ul>
+        <li>Application Pages and Functional Paths</li>
+        <li>Every Link</li>
+        <li><code>robots.txt</code> and other exposed resources</li>
+        <li>Identify Input Vectors: 
+          <br> <span class="small-li">-URL parameters</span>
+
+          <br> <span class="small-li">-POST body (form or JSON)</span>
+              
+          <br> <span class="small-li">-Headers (like X-User-ID, Referer)</span>
+              
+          <br> <span class="small-li">-Cookies</span>
+              
+          <br> <span class="small-li">-WebSocket messages (if used)</span>
+        </li>
+      </ul>
+      <p>Tools you can use:</p>
+      <ul>
+        <li>🔍 <strong>Web spidering tools</strong> - Still searching for a free one. Most good ones like <em>Burp Spider</em> are paid.</li>
+        <li>🕹️ <strong>User-Directed Spidering</strong> - Currently using <code>webhttrack</code> for manual crawling</li>
+        <li>🛠️ <strong>IEWatch</strong> and <strong>IE Dev Mode</strong> - Handy for legacy applications</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Step 2 - Discovering Hidden Content (Go deeper)</h2>
+      <ul>
+        <li>🔐 Brute-force Techniques - (Paid Burp Spider)</li>
+        <li>🔍 Inference from Published Content</li>
+        <li>🌐 Use of Public Info - Like <strong>GitHub</strong> repo leaks</li>
+        <li>🖥️ Leveraging Web Server - <strong>Wikto</strong></li>
+        <li>🧩 Functional Paths - <strong>Burp Intruder</strong></li>
+        <li>🎯 Discovering Hidden Parameters</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Step 3 - Analyzing the Application</h2>
+      <p>Understand how the application works:</p>
+      <ul>
+        <li>🧪 Identifying Entry Points for User Input</li>
+        <li>⚙️ Identifying Server-Side Technologies</li>
+        <li>🛠️ Identifying Server-Side Functionalities</li>
+        <li>📌 Mapping the Attack Surface</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

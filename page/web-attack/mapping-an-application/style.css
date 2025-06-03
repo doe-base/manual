@@ -36,6 +36,10 @@ body {
     margin-bottom: 0.5rem;
   }
   
+  .small-li{
+    font-size: 0.8rem;
+  }
+
   code {
     background: #263238;
     padding: 0.2rem 0.4rem;
