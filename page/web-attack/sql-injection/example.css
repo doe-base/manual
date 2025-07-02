@@ -3,6 +3,7 @@ body {
     color: #f0f0f0;
     font-family: 'Courier New', monospace;
     padding: 2rem;
+    line-height: 1.6;
   }
   
   .container {
@@ -58,3 +59,17 @@ body {
     background-color: #66bb6a;
   }
   
+.back-button {
+  width: 100%;
+  margin: 2rem 0;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  float: left;
+  text-decoration: underline;
+
+}
+.back-button:hover {
+  color: #0096FF;
+}

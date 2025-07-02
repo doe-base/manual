@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>How to Perform a Brute-Force Attack</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🛠️ How to Perform a Brute-Force Attack (Ethically)</h1>
+
+    <p>
+      Brute-force attacks are used in penetration testing to test the strength of authentication mechanisms. This guide is for **educational and legal** purposes only.
+    </p>
+
+    <h2>Step 1: Identify a Login or Input Field</h2>
+    <p>
+      Look for login pages, search fields, or hidden form inputs. Use tools like <code>Burp Suite</code> or browser DevTools to inspect where and how data is sent.
+    </p>
+
+    <h2>Step 2: Intercept the Request</h2>
+    <p>
+      Use <strong>Burp Suite</strong> (Proxy tab) to capture the login POST request. Send it to Intruder or Repeater for testing.
+    </p>
+
+    <h2>Step 3: Choose or Create a Wordlist</h2>
+    <p>
+      Use common password lists like <code>rockyou.txt</code> or generate custom lists using <code>CeWL</code> or <code>Crunch</code>.
+    </p>
+
+    <h2>Step 4: Launch the Attack</h2>
+    <ul>
+      <li>With <strong>Burp Intruder</strong>: Set positions, load payloads, and run the attack.</li>
+      <li>With <strong>Hydra</strong> (CLI):<br>
+        <code>hydra -l admin -P rockyou.txt target.com http-post-form "/login:username=^USER^&password=^PASS^:Invalid"</code>
+      </li>
+    </ul>
+
+    <h2>Step 5: Analyze the Response</h2>
+    <p>
+      Look for differences in status code, response length, or success messages to spot valid credentials.
+    </p>
+
+    <h2>⚠️ Reminder: Legal Use Only</h2>
+    <p>
+      Only test apps you own, have permission to test, or are designed for training (e.g. DVWA, TryHackMe).
+    </p>
+
+    <button onclick="history.back()" class="back-button">← Go Back</button>
+  </div>
+</body>
+</html>
